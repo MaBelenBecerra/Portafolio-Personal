@@ -10,9 +10,16 @@ document.querySelectorAll('nav a').forEach(enlace => {
 const formulario = document.getElementById('formulario-contacto');
 formulario.addEventListener('submit', function(e) {
     e.preventDefault();
-    alert('¡Formulario enviado correctamente!');
-    formulario.reset();
-});
+    const nombre = document.getElementById('nombre').value.trim();
+    const correo = document.getElementById('correo').value.trim();
+    const mensaje = document.getElementById('mensaje').value.trim();
 
+    if(nombre === '' || correo === '' || mensaje === '') {
+        alert('Por favor completa todos los campos.');
+    } else {
+        alert('¡Formulario enviado correctamente!');
+        formulario.reset();
+    }
+});
 // Opcional: Botón de modo oscuro (posible mejora futura)
 
