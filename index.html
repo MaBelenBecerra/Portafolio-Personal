@@ -3,79 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portafolio profesional de Maria Belen Becerra">
-    <meta name="author" content="Maria Belen Becerra">
     <title>Portafolio | Maria Belen Becerra</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
-    <header id="inicio">
-        <h1>Maria Belen Becerra</h1>
-        <p>Agradezco a mi madre y Chat GPT por todo</p>
-        <nav>
-            <ul>
-                <li><a href="#proyectos">Proyectos</a></li>
-                <li><a href="#blog">Blog</a></li>
-                <li><a href="#sobre-mi">Sobre mí</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
+
+    <header class="header">
+        <div class="logo">
+            <h1>Maria Belen Becerra</h1>
+            <p>Frase profesional breve</p>
+        </div>
+        <nav class="navegacion">
+            <a href="#proyectos">Proyectos</a>
+            <a href="#blog">Blog</a>
         </nav>
     </header>
 
-    
-    <section id="proyectos">
-        <h2>Mis Proyectos</h2>
-        <div class="proyectos-container">
-            <!-- tarjetas de proyectos (falta aun) -->
-        </div>
-    </section>
-
-    <section id="blog">
-        <h2>Artículos Recientes</h2>
-        <div class="blog-container">
-            <!--entradas del blog (falta aun) -->
-        </div>
-    </section>
-
-    <section id="sobre-mi">
-        <h2>Sobre mí</h2>
-        <p>Perfil profesional.</p>
-        <p>Educación, experiencia, skills, hobbies.</p>
-    </section>
-
-    <section id="contacto">
-        <h2>Contáctame</h2>
-        <form id="formulario-contacto">
-            <div class="campo-formulario">
-                <label for="nombre">Nombre</label>
-                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+    <main>
+        <section id="proyectos">
+            <h2>Mis Proyectos</h2>
+            <div class="contenedor-tarjetas">
+                <!-- Tarjeta de proyecto -->
+                <div class="tarjeta">
+                    <div class="imagen-tarjeta">Imagen del proyecto</div>
+                    <h3>Sistema solar</h3>
+                    <p>Descripción breve del proyecto.</p>
+                    <a href="#">Ver proyecto</a>
+                </div>
+                <div class="tarjeta">
+                    <div class="imagen-tarjeta">Imagen del proyecto</div>
+                    <h3>Nombre del Proyecto</h3>
+                    <p>Descripción breve del proyecto.</p>
+                    <a href="#">Ver proyecto</a>
+                </div>
+                <div class="tarjeta">
+                    <div class="imagen-tarjeta">Imagen del proyecto</div>
+                    <h3>Nombre del Proyecto</h3>
+                    <p>Descripción breve del proyecto.</p>
+                    <a href="#">Ver proyecto</a>
+                </div>
             </div>
-    
-            <div class="campo-formulario">
-                <label for="correo">Correo electrónico</label>
-                <input type="email" id="correo" name="correo" placeholder="Tu correo" required>
+        </section>
+
+        <section id="blog">
+            <h2>Artículos Recientes</h2>
+            <div class="contenedor-tarjetas">
+                <!-- Tarjeta del blog xd -->
+                <div class="tarjeta">
+                    <h3>Título del Artículo</h3>
+                    <small>Fecha</small>
+                    <p>Resumen breve del artículo.</p>
+                    <a href="#">Leer más</a>
+                </div>
+                <div class="tarjeta">
+                    <h3>Título del Artículo</h3>
+                    <small>Fecha</small>
+                    <p>Resumen breve del artículo.</p>
+                    <a href="#">Leer más</a>
+                </div>
+                <div class="tarjeta">
+                    <h3>Título del Artículo</h3>
+                    <small>Fecha</small>
+                    <p>Resumen breve del artículo.</p>
+                    <a href="#">Leer más</a>
+                </div>
             </div>
-    
-            <div class="campo-formulario">
-                <label for="mensaje">Mensaje</label>
-                <textarea id="mensaje" name="mensaje" placeholder="Tu mensaje" rows="5" required></textarea>
-            </div>
-    
-            <button type="submit">Enviar Mensaje</button>
-        </form>
-    </section>
-    
+        </section>
+
+        <section id="sobre-mi">
+            <h2>Sobre mí</h2>
+            <p>Perfil profesional, educación, skills, hobbies.</p>
+        </section>
+
+        <section id="contacto">
+            <h2>Contáctame</h2>
+            <form id="formulario-contacto">
+                <input type="text" placeholder="Nombre" required>
+                <input type="email" placeholder="Correo electrónico" required>
+                <textarea placeholder="Mensaje" required></textarea>
+                <button type="submit">Enviar Mensaje</button>
+            </form>
+        </section>
+    </main>
 
     <footer>
-        <p>© Maria Belen Becerra 2025</p>
-        <div class="redes-sociales">
-            <a href="#" target="_blank">GitHub</a>
-            <a href="#" target="_blank">LinkedIn</a>
-            <a href="#" target="_blank">Instagram</a>
+        <p>© Maria Belen Becerra Rievra 2025</p>
+        <div class="redes">
+            <a href="#">GitHub</a> - <a href="#">LinkedIn</a>
         </div>
     </footer>
 
-    <script src="script.js"></script>
 </body>
 </html>
