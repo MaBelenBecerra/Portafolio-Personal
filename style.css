@@ -119,8 +119,7 @@ footer {
     text-decoration: none;
     margin: 0 5px;
 }
-
-/* Mobile 
+ 
 @media (max-width: 768px) {
     .header {
         flex-direction: column;
@@ -132,4 +131,38 @@ footer {
         display: inline-block;
     }
 }
-*/
+
+#modo-oscuro-toggle {
+    margin-left: 20px;
+    background: none;
+    border: 2px solid var(--color-principal);
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: all 0.3s ease;
+}
+
+#modo-oscuro-toggle:hover {
+    background: var(--color-acento);
+    color: white;
+}
+
+.dark-mode {
+    background-color: #1e1e2f;
+    color: #f9f9f9;
+}
+
+.dark-mode .header,
+.dark-mode footer {
+    background-color: #111827;
+}
+
+.dark-mode .tarjeta,
+.dark-mode .imagen-tarjeta {
+    background-color: #374151;
+}
+
+.dark-mode a {
+    color: #93c5fd;
+}

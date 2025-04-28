@@ -21,5 +21,17 @@ formulario.addEventListener('submit', function(e) {
         formulario.reset();
     }
 });
-// Opcional: Botón de modo oscuro (posible mejora futura)
+
+const botonModoOscuro = document.getElementById('modo-oscuro-toggle');
+
+botonModoOscuro.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+
+    
+    if (document.body.classList.contains('dark-mode')) {
+        botonModoOscuro.textContent = '☀️';
+    } else {
+        botonModoOscuro.textContent = '🌙';
+    }
+});
 
