@@ -15,6 +15,7 @@ body {
     font-family: 'Arial', sans-serif;
     background: var(--color-fondo);
     color: var(--color-principal);
+    transition: background 0.3s, color 0.3s;
 }
 
 .encabezado {
@@ -40,6 +41,11 @@ body {
     text-decoration: none;
     color: var(--color-principal);
     font-weight: bold;
+    transition: color 0.3s;
+}
+
+.encabezado__nav a:hover {
+    color: var(--color-acento);
 }
 
 .boton--modo-oscuro {
@@ -51,11 +57,13 @@ body {
     cursor: pointer;
     font-size: 20px;
     transition: all 0.3s ease;
+    color: var(--color-principal);
 }
 
 .boton--modo-oscuro:hover {
     background: var(--color-acento);
     color: white;
+    border-color: var(--color-acento);
 }
 
 main {
@@ -78,7 +86,8 @@ h2 {
     padding: 20px;
     border-radius: 12px;
     text-align: center;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s;
 }
 
 .tarjeta__imagen {
@@ -97,6 +106,11 @@ h2 {
     color: var(--color-acento);
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.3s;
+}
+
+.tarjeta__link:hover {
+    color: #6366f1;
 }
 
 .formulario-contacto__campo {
@@ -116,6 +130,11 @@ h2 {
     width: 100%;
     cursor: pointer;
     font-size: 16px;
+    transition: background 0.3s;
+}
+
+.formulario-contacto__boton:hover {
+    background: #4338ca;
 }
 
 .pie {
@@ -130,6 +149,26 @@ h2 {
     color: var(--color-principal);
     text-decoration: none;
     margin: 0 5px;
+    transition: color 0.3s;
+}
+
+.pie__redes a:hover {
+    color: var(--color-acento);
+}
+.pie__redes a {
+    color: var(--color-principal);
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 24px;
+    transition: color 0.3s;
+}
+
+.dark-mode .pie__redes a {
+    color: #f9f9f9;
+}
+
+.dark-mode .pie__redes a:hover {
+    color: #93c5fd;
 }
 
 @media (max-width: 768px) {
@@ -144,6 +183,7 @@ h2 {
     }
 }
 
+/* Modo oscuro */
 .dark-mode {
     background-color: #1e1e2f;
     color: #f9f9f9;
@@ -154,11 +194,26 @@ h2 {
     background-color: #111827;
 }
 
-.dark-mode .tarjeta,
-.dark-mode .tarjeta__imagen {
+.dark-mode .tarjeta {
     background-color: #374151;
+    color: #f9f9f9;
+}
+
+.dark-mode .tarjeta__imagen {
+    background-color: #4b5563;
+    color: #e5e7eb;
 }
 
 .dark-mode a {
     color: #93c5fd;
+}
+
+.dark-mode .formulario-contacto__campo {
+    background-color: #1f2937;
+    border-color: #4b5563;
+    color: white;
+}
+
+.dark-mode .formulario-contacto__boton {
+    background: #6366f1;
 }
