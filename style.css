@@ -1,10 +1,8 @@
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
 
 :root {
     --color-principal: #1e1e2f;
@@ -15,34 +13,49 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
     background: var(--color-fondo);
     color: var(--color-principal);
 }
 
-.header {
+.encabezado {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 50px;
+    background-color: inherit;
 }
 
-.logo h1 {
+.encabezado__logo h1 {
     margin: 0;
 }
 
-.logo p {
-    margin: 5px 0 0;
+.encabezado__logo p {
+    margin-top: 5px;
     font-size: 14px;
     color: var(--color-gris);
 }
 
-.navegacion a {
+.encabezado__nav a {
     margin-left: 20px;
     text-decoration: none;
     color: var(--color-principal);
     font-weight: bold;
+}
+
+.boton--modo-oscuro {
+    margin-left: 20px;
+    background: none;
+    border: 2px solid var(--color-principal);
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: all 0.3s ease;
+}
+
+.boton--modo-oscuro:hover {
+    background: var(--color-acento);
+    color: white;
 }
 
 main {
@@ -68,7 +81,7 @@ h2 {
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-.imagen-tarjeta {
+.tarjeta__imagen {
     background: #d1d5db;
     height: 150px;
     border-radius: 8px;
@@ -80,14 +93,13 @@ h2 {
     color: #374151;
 }
 
-.tarjeta a {
+.tarjeta__link {
     color: var(--color-acento);
     text-decoration: none;
     font-weight: bold;
 }
 
-#formulario-contacto input,
-#formulario-contacto textarea {
+.formulario-contacto__campo {
     width: 100%;
     padding: 12px;
     margin-bottom: 15px;
@@ -95,7 +107,7 @@ h2 {
     border: 1px solid #ccc;
 }
 
-#formulario-contacto button {
+.formulario-contacto__boton {
     background: var(--color-acento);
     color: white;
     border: none;
@@ -106,7 +118,7 @@ h2 {
     font-size: 16px;
 }
 
-footer {
+.pie {
     text-align: center;
     padding: 30px 20px;
     background: #f1f5f9;
@@ -114,22 +126,39 @@ footer {
     font-size: 14px;
 }
 
-.redes a {
+.pie__redes a {
     color: var(--color-principal);
     text-decoration: none;
     margin: 0 5px;
 }
 
-/* Mobile 
 @media (max-width: 768px) {
-    .header {
+    .encabezado {
         flex-direction: column;
         text-align: center;
     }
 
-    .navegacion a {
+    .encabezado__nav a {
         margin: 10px;
         display: inline-block;
     }
 }
-*/
+
+.dark-mode {
+    background-color: #1e1e2f;
+    color: #f9f9f9;
+}
+
+.dark-mode .encabezado,
+.dark-mode .pie {
+    background-color: #111827;
+}
+
+.dark-mode .tarjeta,
+.dark-mode .tarjeta__imagen {
+    background-color: #374151;
+}
+
+.dark-mode a {
+    color: #93c5fd;
+}

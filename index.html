@@ -1,81 +1,46 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portafolio profesional de Maria Belen Becerra">
-    <meta name="author" content="Maria Belen Becerra">
-    <title>Portafolio | Maria Belen Becerra</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    
-    <header id="inicio">
-        <h1>Maria Belen Becerra</h1>
-        <p>Agradezco a mi madre y Chat GPT por todo</p>
-        <nav>
-            <ul>
-                <li><a href="#proyectos">Proyectos</a></li>
-                <li><a href="#blog">Blog</a></li>
-                <li><a href="#sobre-mi">Sobre mí</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    
+<header class="encabezado">
+    <div class="encabezado__logo">
+      <h1>Maria Belen Becerra</h1>
+      <p>Agradezco a mi mami y Chat GPT por todo</p>
+    </div>
+    <nav class="encabezado__nav">
+      <a href="#proyectos">Proyectos</a>
+      <a href="#blog">Blog</a>
+    </nav>
+    <button class="boton--modo-oscuro" id="modo-oscuro-toggle">🌙</button>
+  </header>
+  
+  <main>
     <section id="proyectos">
-        <h2>Mis Proyectos</h2>
-        <div class="proyectos-container">
-            <!-- tarjetas de proyectos (falta aun) -->
+      <h2>Mis Proyectos</h2>
+      <div class="contenedor-tarjetas">
+        <div class="tarjeta">
+          <div class="tarjeta__imagen">Imagen</div>
+          <h3 class="tarjeta__titulo">Título Proyecto</h3>
+          <p class="tarjeta__descripcion">Descripción breve</p>
+          <a href="#" class="tarjeta__link">Ver proyecto</a>
         </div>
+        <!-- +2 tarjetas -->
+      </div>
     </section>
-
-    <section id="blog">
-        <h2>Artículos Recientes</h2>
-        <div class="blog-container">
-            <!--entradas del blog (falta aun) -->
-        </div>
-    </section>
-
-    <section id="sobre-mi">
-        <h2>Sobre mí</h2>
-        <p>Perfil profesional.</p>
-        <p>Educación, experiencia, skills, hobbies.</p>
-    </section>
-
+  
     <section id="contacto">
-        <h2>Contáctame</h2>
-        <form id="formulario-contacto">
-            <div class="campo-formulario">
-                <label for="nombre">Nombre</label>
-                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
-            </div>
-    
-            <div class="campo-formulario">
-                <label for="correo">Correo electrónico</label>
-                <input type="email" id="correo" name="correo" placeholder="Tu correo" required>
-            </div>
-    
-            <div class="campo-formulario">
-                <label for="mensaje">Mensaje</label>
-                <textarea id="mensaje" name="mensaje" placeholder="Tu mensaje" rows="5" required></textarea>
-            </div>
-    
-            <button type="submit">Enviar Mensaje</button>
-        </form>
+      <h2>Contáctame</h2>
+      <form id="formulario-contacto">
+        <input type="text" class="formulario-contacto__campo" id="nombre" placeholder="Nombre" />
+        <input type="email" class="formulario-contacto__campo" id="correo" placeholder="Correo electrónico" />
+        <textarea class="formulario-contacto__campo" id="mensaje" placeholder="Tu mensaje"></textarea>
+        <button class="formulario-contacto__boton">Enviar mensaje</button>
+      </form>
     </section>
-    
-
-    <footer>
-        <p>© Maria Belen Becerra 2025</p>
-        <div class="redes-sociales">
-            <a href="#" target="_blank">GitHub</a>
-            <a href="#" target="_blank">LinkedIn</a>
-            <a href="#" target="_blank">Instagram</a>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
-</html>
+  </main>
+  
+  <footer class="footer">
+    <p class="footer__copy">© Maria Belen Becerra Rievra 2025</p>
+    <div class="footer__redes">
+      <a class="footer__enlace" href="https://github.com/MaBelenBecerra" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a class="footer__enlace" href="https://www.linkedin.com/in/mariabelenbr" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    </div>
+  </footer>
+  
+  
