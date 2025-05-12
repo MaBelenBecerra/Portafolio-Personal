@@ -1,0 +1,39 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+}
+
+.logo h1 {
+    margin: 0;
+}
+
+.logo p {
+    margin: 5px 0 0;
+    font-size: 14px;
+    color: var(--color-gris);
+}
+
+.navegacion a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: var(--color-principal);
+    font-weight: bold;
+}
+
+#modo-oscuro-toggle {
+    margin-left: 20px;
+    background: none;
+    border: 2px solid var(--color-principal);
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: all 0.3s ease;
+}
+
+#modo-oscuro-toggle:hover {
+    background: var(--color-acento);
+    color: white;
+}

@@ -13,57 +13,34 @@
 
 body {
     font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
     background: var(--color-fondo);
     color: var(--color-principal);
-    transition: background 0.3s, color 0.3s;
 }
 
-.encabezado {
+.header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 50px;
-    background-color: inherit;
 }
 
-.encabezado__logo h1 {
+.logo h1 {
     margin: 0;
 }
 
-.encabezado__logo p {
-    margin-top: 5px;
+.logo p {
+    margin: 5px 0 0;
     font-size: 14px;
     color: var(--color-gris);
 }
 
-.encabezado__nav a {
+.navegacion a {
     margin-left: 20px;
     text-decoration: none;
     color: var(--color-principal);
     font-weight: bold;
-    transition: color 0.3s;
-}
-
-.encabezado__nav a:hover {
-    color: var(--color-acento);
-}
-
-.boton--modo-oscuro {
-    margin-left: 20px;
-    background: none;
-    border: 2px solid var(--color-principal);
-    border-radius: 50%;
-    padding: 10px;
-    cursor: pointer;
-    font-size: 20px;
-    transition: all 0.3s ease;
-    color: var(--color-principal);
-}
-
-.boton--modo-oscuro:hover {
-    background: var(--color-acento);
-    color: white;
-    border-color: var(--color-acento);
 }
 
 main {
@@ -86,11 +63,10 @@ h2 {
     padding: 20px;
     border-radius: 12px;
     text-align: center;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    transition: background 0.3s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-.tarjeta__imagen {
+.imagen-tarjeta {
     background: #d1d5db;
     height: 150px;
     border-radius: 8px;
@@ -102,18 +78,14 @@ h2 {
     color: #374151;
 }
 
-.tarjeta__link {
+.tarjeta a {
     color: var(--color-acento);
     text-decoration: none;
     font-weight: bold;
-    transition: color 0.3s;
 }
 
-.tarjeta__link:hover {
-    color: #6366f1;
-}
-
-.formulario-contacto__campo {
+#formulario-contacto input,
+#formulario-contacto textarea {
     width: 100%;
     padding: 12px;
     margin-bottom: 15px;
@@ -121,7 +93,7 @@ h2 {
     border: 1px solid #ccc;
 }
 
-.formulario-contacto__boton {
+#formulario-contacto button {
     background: var(--color-acento);
     color: white;
     border: none;
@@ -130,14 +102,9 @@ h2 {
     width: 100%;
     cursor: pointer;
     font-size: 16px;
-    transition: background 0.3s;
 }
 
-.formulario-contacto__boton:hover {
-    background: #4338ca;
-}
-
-.pie {
+footer {
     text-align: center;
     padding: 30px 20px;
     background: #f1f5f9;
@@ -145,75 +112,57 @@ h2 {
     font-size: 14px;
 }
 
-.pie__redes a {
+.redes a {
     color: var(--color-principal);
     text-decoration: none;
     margin: 0 5px;
-    transition: color 0.3s;
 }
 
-.pie__redes a:hover {
-    color: var(--color-acento);
-}
-.pie__redes a {
-    color: var(--color-principal);
-    text-decoration: none;
-    margin: 0 10px;
-    font-size: 24px;
-    transition: color 0.3s;
-}
-
-.dark-mode .pie__redes a {
-    color: #f9f9f9;
-}
-
-.dark-mode .pie__redes a:hover {
-    color: #93c5fd;
-}
-
+/* Mobile */
 @media (max-width: 768px) {
-    .encabezado {
+    .header {
         flex-direction: column;
         text-align: center;
     }
 
-    .encabezado__nav a {
+    .navegacion a {
         margin: 10px;
         display: inline-block;
     }
 }
 
-/* Modo oscuro */
+#modo-oscuro-toggle {
+    margin-left: 20px;
+    background: none;
+    border: 2px solid var(--color-principal);
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: all 0.3s ease;
+}
+
+#modo-oscuro-toggle:hover {
+    background: var(--color-acento);
+    color: white;
+}
+
+/* Tema oscuro */
 .dark-mode {
     background-color: #1e1e2f;
     color: #f9f9f9;
 }
 
-.dark-mode .encabezado,
-.dark-mode .pie {
+.dark-mode .header,
+.dark-mode footer {
     background-color: #111827;
 }
 
-.dark-mode .tarjeta {
+.dark-mode .tarjeta,
+.dark-mode .imagen-tarjeta {
     background-color: #374151;
-    color: #f9f9f9;
-}
-
-.dark-mode .tarjeta__imagen {
-    background-color: #4b5563;
-    color: #e5e7eb;
 }
 
 .dark-mode a {
     color: #93c5fd;
-}
-
-.dark-mode .formulario-contacto__campo {
-    background-color: #1f2937;
-    border-color: #4b5563;
-    color: white;
-}
-
-.dark-mode .formulario-contacto__boton {
-    background: #6366f1;
 }
