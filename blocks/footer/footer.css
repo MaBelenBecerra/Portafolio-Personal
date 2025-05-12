@@ -1,0 +1,13 @@
+footer {
+    text-align: center;
+    padding: 30px 20px;
+    background: #f1f5f9;
+    margin-top: 50px;
+    font-size: 14px;
+}
+
+.redes a {
+    color: var(--color-principal);
+    text-decoration: none;
+    margin: 0 5px;
+}

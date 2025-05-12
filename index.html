@@ -1,64 +1,103 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portafolio Personal</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio | Tu Nombre</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="encabezado">
-    <div class="encabezado__logo">
-      <h1>Maria Belen Becerra</h1>
-      <p>Agradezco a mi mami y Chat GPT por todo</p>
-    </div>
-    <nav class="encabezado__nav">
-      <a href="#proyectos">Proyectos</a>
-      <a href="#blog">Blog</a>
-    </nav>
-    <button class="boton--modo-oscuro" id="modo-oscuro-toggle">🌙</button>
-  </header>
-  
-  <main>
-    <section id="proyectos">
-      <h2>Mis Proyectos</h2>
-      <div class="contenedor-tarjetas">
-        <div class="tarjeta">
-          <div class="tarjeta__imagen">Imagen</div>
-          <h3 class="tarjeta__titulo">Título Proyecto</h3>
-          <p class="tarjeta__descripcion">Descripción breve</p>
-          <a href="#" class="tarjeta__link">Ver proyecto</a>
+
+    <header class="header">
+        <div class="logo">
+            <h1>Tu Nombre</h1>
+            <p>Frase profesional breve</p>
         </div>
-        <!-- +2 tarjetas -->
-      </div>
-    </section>
-  
-    <section id="contacto">
-      <h2>Contáctame</h2>
-      <form id="formulario-contacto">
-        <input type="text" class="formulario-contacto__campo" id="nombre" placeholder="Nombre" />
-        <input type="email" class="formulario-contacto__campo" id="correo" placeholder="Correo electrónico" />
-        <textarea class="formulario-contacto__campo" id="mensaje" placeholder="Tu mensaje"></textarea>
-        <button class="formulario-contacto__boton">Enviar mensaje</button>
-      </form>
-    </section>
-  </main>
-  
-  <footer class="footer">
-    <p class="footer__copy">© Maria Belen Becerra Rievra 2025</p>
-    <div class="footer__redes">
-      <a class="footer__enlace" href="https://github.com/MaBelenBecerra" target="_blank" rel="noopener noreferrer">GitHub</a>
-      <a class="footer__enlace" href="https://www.linkedin.com/in/mariabelenbr" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-    </div>
-    <div class="pie__redes">
-      <a href="https://github.com/MaBelenBecerra" target="_blank" aria-label="GitHub">
-        <i class="fab fa-github"></i>
-      </a>
-      <a href="https://linkedin.com/in/mariabelenbr" target="_blank" aria-label="LinkedIn">
-        <i class="fab fa-linkedin"></i>
-      </a>
-    </div>
-  </footer>
+        <nav class="navegacion">
+            <a href="#proyectos">Proyectos</a>
+            <a href="#blog">Blog</a>
+        </nav>
+        <button id="modo-oscuro-toggle" aria-label="Cambiar modo oscuro">🌙</button>
+    </header>
+
+    <main>
+        <section id="proyectos">
+            <h2>Mis Proyectos</h2>
+            <div class="contenedor-tarjetas">
+                <!-- Tarjeta de proyecto -->
+                <div class="tarjeta">
+                    <div class="imagen-tarjeta">Imagen del proyecto</div>
+                    <h3>Nombre del Proyecto</h3>
+                    <p>Descripción breve del proyecto.</p>
+                    <a href="#">Ver proyecto</a>
+                </div>
+                <div class="tarjeta">
+                    <div class="imagen-tarjeta">Imagen del proyecto</div>
+                    <h3>Nombre del Proyecto</h3>
+                    <p>Descripción breve del proyecto.</p>
+                    <a href="#">Ver proyecto</a>
+                </div>
+                <div class="tarjeta">
+                    <div class="imagen-tarjeta">Imagen del proyecto</div>
+                    <h3>Nombre del Proyecto</h3>
+                    <p>Descripción breve del proyecto.</p>
+                    <a href="#">Ver proyecto</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="blog">
+            <h2>Artículos Recientes</h2>
+            <div class="contenedor-tarjetas">
+                <!-- Tarjeta de blog -->
+                <div class="tarjeta">
+                    <h3>Título del Artículo</h3>
+                    <small>Fecha</small>
+                    <p>Resumen breve del artículo.</p>
+                    <a href="#">Leer más</a>
+                </div>
+                <div class="tarjeta">
+                    <h3>Título del Artículo</h3>
+                    <small>Fecha</small>
+                    <p>Resumen breve del artículo.</p>
+                    <a href="#">Leer más</a>
+                </div>
+                <div class="tarjeta">
+                    <h3>Título del Artículo</h3>
+                    <small>Fecha</small>
+                    <p>Resumen breve del artículo.</p>
+                    <a href="#">Leer más</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="sobre-mi">
+            <h2>Sobre mí</h2>
+            <p>Perfil profesional, educación, skills, hobbies.</p>
+        </section>
+
+        <section id="contacto">
+            <h2>Contáctame</h2>
+            <form id="formulario-contacto">
+                <input type="text" placeholder="Nombre" required>
+                <input type="email" placeholder="Correo electrónico" required>
+                <textarea placeholder="Mensaje" required></textarea>
+                <button type="submit">Enviar Mensaje</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© Tu Nombre 2025</p>
+        <div class="redes">
+            <a href="#">GitHub</a> - <a href="#">LinkedIn</a>
+        </div>
+    </footer>
+
+    <button id="modo-oscuro-toggle">Modo Oscuro</button>
+    <script src="script.js"></script>
+</body>
+</html>
   
   
   

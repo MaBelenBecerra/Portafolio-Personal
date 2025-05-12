@@ -1,0 +1,6 @@
+.tarjeta__titulo {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: var(--color-principal);
+}

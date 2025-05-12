@@ -1,0 +1,5 @@
+.tarjeta__enlace {
+    color: var(--color-acento);
+    text-decoration: none;
+    font-weight: bold;
+}
